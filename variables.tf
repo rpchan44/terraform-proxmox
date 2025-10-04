@@ -31,4 +31,11 @@ variable "cpu_cores" {
   description = "Core Count"
 }
 
+variable "gateway" {
+  type        = string
+  description = "Gateway"
+}
+
+
+
 

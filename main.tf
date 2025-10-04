@@ -19,8 +19,8 @@ module "launch_vm" {
   secret        = var.secret
   disk_size     = var.disk_size
   node_name     = var.node_name
+  gateway       = var.gateway
   ip_address    = each.value
-  gateway       = "192.168.51.1"
 
 }
 
