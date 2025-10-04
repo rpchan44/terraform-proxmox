@@ -12,7 +12,7 @@ module "launch_vm" {
   for_each = local.vms
 
   instance_name = each.key
-  os_release    = local.cloud_image["noble"]
+  os_release    = local.cloud_image["${each.value.os_image}"]
   memory        = var.memory
   cpu_cores     = var.cpu_cores
   username      = var.username
@@ -20,7 +20,7 @@ module "launch_vm" {
   disk_size     = var.disk_size
   node_name     = var.node_name
   gateway       = var.gateway
-  ip_address    = each.value
+  ip_address    = "${each.value.cidr}"
 
 }
 

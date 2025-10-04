@@ -4,10 +4,19 @@ locals {
 }
 
 locals {
-  # key & value
   vms = {
-    "avq-test-01" = "192.168.51.30/24"
-    "avq-test-02" = "192.168.51.31/24"
-    "avq-test-03" = "192.168.51.32/24"
+    "avq-test-01" = {
+      cidr     = "192.168.51.30/24"
+      os_image = "noble"
+    }
+    "avq-test-02" = {
+      cidr     = "192.168.51.31/24"
+      os_image = "jammy"
+    }
+    "avq-test-03" = {
+      cidr     = "192.168.51.32/24"
+      os_image = "noble"
+    }
   }
 }
+
