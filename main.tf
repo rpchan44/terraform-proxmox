@@ -14,7 +14,7 @@ module "launch_vm" {
   instance_name = each.key
   os_release    = local.cloud_image["${each.value.os_image}"]
   memory        = var.memory
-  cpu_cores     = var.cpu_cores
+  cpu_cores     = each.value.cores
   username      = var.username
   secret        = var.secret
   disk_size     = var.disk_size
