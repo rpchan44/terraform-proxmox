@@ -15,7 +15,7 @@ module "launch_vm" {
   instance_name = each.key
   ip_address    = each.value.cidr
   cpu_cores     = each.value.cores
-  memory        = var.memory
+  memory        = each.value.ram
   username      = var.username
   secret        = var.secret
   disk_size     = var.disk_size
