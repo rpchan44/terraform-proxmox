@@ -1,8 +1,7 @@
 resource "proxmox_virtual_environment_vm" "server" {
 
-  name      = var.instance_name
-  node_name = var.node_name
-
+  name            = var.instance_name
+  node_name       = var.node_name
   stop_on_destroy = true
 
   cpu {
@@ -24,7 +23,6 @@ resource "proxmox_virtual_environment_vm" "server" {
         gateway = var.gateway
       }
     }
-
   }
 
   network_device {
@@ -40,6 +38,5 @@ resource "proxmox_virtual_environment_vm" "server" {
     discard      = "on"
     size         = var.disk_size
   }
-
 
 }
