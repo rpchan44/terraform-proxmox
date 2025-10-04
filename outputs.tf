@@ -3,5 +3,5 @@ output "images" {
 }
 
 output "guest_name" {
-  value = module.launch_vm.vm_name
+  value = [for m in module.launch_vm : m.vm_name]
 }
