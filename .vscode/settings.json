@@ -4,6 +4,7 @@
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
   "files.exclude": {
+    "**/.gitignore": true,
     "**/.terraform": true,
     "**/README.md": true,
     "**/*.tfstate": true,
