@@ -5,6 +5,7 @@
   "files.insertFinalNewline": true,
   "files.exclude": {
     "**/.terraform": true,
+    "**/README.md": true,
     "**/*.tfstate": true,
     "**/*.tfstate.*": true
   },
