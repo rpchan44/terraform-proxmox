@@ -8,14 +8,17 @@ locals {
     "avq-test-01" = {
       cidr     = "192.168.51.30/24"
       os_image = "noble"
+      cores    = 1
     }
     "avq-test-02" = {
       cidr     = "192.168.51.31/24"
       os_image = "jammy"
+      cores    = 1
     }
     "avq-test-03" = {
       cidr     = "192.168.51.32/24"
       os_image = "noble"
+      cores    = 1
     }
   }
 }
