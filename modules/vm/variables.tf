@@ -55,3 +55,7 @@ variable "memory" {
 variable "cpu_cores" {
   type = number
 }
+
+variable "ssh_keys" {
+  type = string
+}

@@ -22,6 +22,7 @@ module "launch_vm" {
   disk_size     = var.disk_size
   node_name     = var.node_name
   gateway       = var.gateway
+  ssh_keys      = var.ssh_keys
 
 }
 
