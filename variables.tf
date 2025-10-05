@@ -7,14 +7,12 @@ variable "node_name" {
 variable "username" {
   type        = string
   description = "Username"
-  default     = "adminuser"
   sensitive   = true
 }
 
 variable "secret" {
   type        = string
   description = "secret"
-  default     = "adminuser"
   sensitive   = true
 }
 
@@ -45,5 +43,4 @@ variable "gateway" {
 variable "ssh_keys" {
   type = string
   description = "SSH Keys"
-  default=""
 }
