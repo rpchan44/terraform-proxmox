@@ -5,13 +5,13 @@ locals {
 
 locals {
   vms = {
-    "avq-test-03" = {
+    "avq-test-01" = {
       cidr     = "192.168.51.31/24"
       os_image = "noble"
-      cores    = 1
+      cores    = 2
       ram      = 1024
     }
-    "avq-test-04" = {
+    "avq-test-02" = {
       cidr     = "192.168.51.32/24"
       os_image = "noble"
       cores    = 2
