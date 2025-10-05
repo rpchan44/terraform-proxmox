@@ -22,7 +22,7 @@ module "launch_instance" {
   disk_size     = var.disk_size
   node_name     = var.node_name
   gateway       = var.gateway
-  ssh_keys      = try(data.local_file.keys.content,var.ssh_keys)
+  ssh_keys      = var.ssh_keys
 
 }
 
