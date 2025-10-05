@@ -4,6 +4,7 @@ module "download_iso" {
   for_each    = toset(local.env_config.distribution.images)
   release     = each.value
   server_name = var.node_name
+
 }
 
 module "launch_vm" {

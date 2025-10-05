@@ -23,6 +23,12 @@ locals {
       cores    = 1
       ram      = 1024
     }
+    "avq-test-04" = {
+      cidr     = "192.168.51.33/24"
+      os_image = "noble"
+      cores    = 2
+      ram      = 1024
+    }
   }
 }
 
