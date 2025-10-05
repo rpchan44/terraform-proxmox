@@ -43,6 +43,6 @@ variable "gateway" {
 }
 
 variable "ssh_keys" {
-  type = string
+  type = optional(string)
   description = "SSH Keys"
 }
