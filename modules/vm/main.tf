@@ -16,7 +16,7 @@ resource "proxmox_virtual_environment_vm" "server" {
     user_account {
       username = var.username
       password = var.secret
-      keys     = try([trimspace(var.ssh_keys)],"")
+      keys     = var.ssh_keys != "" ? [trimspace(var.ssh_keys)] : []
     }
     ip_config {
       ipv4 {
