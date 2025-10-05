@@ -44,6 +44,6 @@ variable "gateway" {
 
 variable "ssh_keys" {
   type = string
-  nullable = true
   description = "SSH Keys"
+  default=""
 }
