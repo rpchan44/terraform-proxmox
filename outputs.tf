@@ -3,5 +3,5 @@ output "image_factory" {
 }
 
 output "launch_instance" {
- value = [for m in module.launch_instance : m.vm_name]
+value = [for m in module.launch_instance : m.vm_name]
 }
