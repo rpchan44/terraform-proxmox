@@ -51,6 +51,7 @@ variable "pve_user" {
   description = "Password"
   default=""
 }
+
 variable "pve_secret" {
   type = string
   description = "Password"

@@ -1,9 +1,3 @@
-drift:
-  enabled: true
-  schedules:
-    default:
-      tag_query: ''
-      schedule: daily
 automerge:
   enabled: false
   delete_branch: true
