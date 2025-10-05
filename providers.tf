@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "proxmox" {
-  endpoint = "https://192.168.50.2:8006/"
+  endpoint = var.pve_api
 
   # TODO: use terraform variable or remove the line, and use PROXMOX_VE_USERNAME environment variable
   username = var.pve_user
