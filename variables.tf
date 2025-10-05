@@ -60,19 +60,3 @@ variable "pve_api" {
   type = string
   description = "API Endpoint"
 }
-
-variable "minio_access_key" {
-  type = string
-  description = "Access Key"
-}
-
-variable "minio_secret" {
-  type = string
-  description = "Password"
-}
-
-variable "minio_endpoint" {
-  type = string
-  description = "Endpoint Address"
-}
-
