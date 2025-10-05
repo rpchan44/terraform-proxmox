@@ -13,13 +13,13 @@ locals {
       vlan     = 51       # this can be override default value set to null
       #bridge  = "vmbr0"  # this can be override if you don't set it default to vmbr0
     }
-    # "vm-test-02" = {
-    #   cidr     = "192.168.51.32/24"
-    #   os_image = "noble"
-    #   cores    = 2
-    #   ram      = 1024
-    #   vlan     = 51
-    # }
+    "vm-test-02" = {
+      cidr     = "192.168.51.32/24"
+      os_image = "noble"
+      cores    = 2
+      ram      = 1024
+      vlan     = 51
+    }
     # "vm-test-03" = {
     #   cidr     = "192.168.51.33/24"
     #   os_image = "noble"
