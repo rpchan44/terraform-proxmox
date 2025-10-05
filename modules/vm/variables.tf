@@ -57,5 +57,5 @@ variable "cpu_cores" {
 }
 
 variable "ssh_keys" {
-  type = string
+  type = optional(string)
 }
