@@ -1,3 +1,7 @@
+data "local_file" "keys" {
+  filename = pathexpand("~/.ssh/id_rsa.pub")
+}
+
 data "terraform_remote_state" "installer" {
   backend = "s3"
   config = {
