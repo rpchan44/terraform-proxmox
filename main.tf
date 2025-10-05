@@ -12,7 +12,7 @@ module "launch_instance" {
 
   for_each = local.vms
 
-  os_release    = local.cloud_image["${each.value.os_image}"]
+  os_release    = local.cloud_image[each.value.os_image]
   instance_name = each.key
   ip_address    = each.value.cidr
   cpu_cores     = each.value.cores
