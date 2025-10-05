@@ -34,11 +34,6 @@ jobs:
     name: Terrateam Action
     environment: '${{ github.event.inputs.environment }}'
     steps:
-      - name: Create SSH key file
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PUBLIC_KEY }}" > ~/.ssh/id_rsa.pub
-          chmod 600 ~/.ssh/id_rsa.pub
       - uses: actions/checkout@v4
       - name: Run Terrateam Action
         id: terrateam
