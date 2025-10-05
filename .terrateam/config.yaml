@@ -1,4 +1,0 @@
-automerge:
-  enabled: false
-  delete_branch: true
-  require_explicit_apply: true
