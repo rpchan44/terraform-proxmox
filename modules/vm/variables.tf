@@ -58,5 +58,4 @@ variable "cpu_cores" {
 
 variable "ssh_keys" {
   type = string
-  nullable = true
 }
