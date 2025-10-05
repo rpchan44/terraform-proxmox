@@ -1,4 +1,4 @@
-module "download_iso" {
+module "image_factory" {
   source = "./modules/images"
 
   for_each    = toset(local.env_config.distribution.images)
@@ -7,7 +7,7 @@ module "download_iso" {
 
 }
 
-module "launch_vm" {
+module "launch_instance" {
   source = "./modules/vm"
 
   for_each = local.vms
