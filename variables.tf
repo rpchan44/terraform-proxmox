@@ -45,3 +45,14 @@ variable "ssh_keys" {
   description = "SSH Keys"
   default=""
 }
+
+variable "pve_user" {
+  type = string
+  description = "Password"
+  default=""
+}
+variable "pve_secret" {
+  type = string
+  description = "Password"
+  default=""
+}
