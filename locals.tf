@@ -14,7 +14,7 @@ locals {
       #bridge  = "vmbr0"  # this can be override if you don't set it default to vmbr0
       tags     = ["noble"]
     }
-    "vm-test-02" = {
+    "vm-test-03" = {
       cidr     = "192.168.51.32/24"
       os_image = "jammy"
       cores    = 2
