@@ -15,8 +15,8 @@ module "image_factory" {
 module "launch_instance" {
 
   source = "./modules/vm"
-  for_each = local.cloud_image == null ? {} : local.vms
-  depends_on = [module.image_factory]
+
+  for_each = local.vms
 
   os_release    = local.cloud_image[each.value.os_image]
   instance_name = each.key
