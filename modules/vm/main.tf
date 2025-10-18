@@ -1,3 +1,11 @@
+resource "proxmox_virtual_environment_dns" "default" {
+
+  node_name     = var.node_name
+  domain        = var.domain
+  servers       = var.dns_server
+
+}
+
 resource "proxmox_virtual_environment_vm" "server" {
 
   name            = var.instance_name

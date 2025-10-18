@@ -18,6 +18,7 @@ module "launch_instance" {
   vlan_id       = try(each.value.vlan, "")
   bridge        = try(each.value.bridge,"")
   tags          = try(each.value.tags,[])
+  dns_server    = each.value.dns
   node_name     = each.value.node
   ip_address    = each.value.cidr
   gateway       = each.value.next-hop
@@ -28,6 +29,7 @@ module "launch_instance" {
   disk_size     = var.disk_size
   ssh_keys      = var.ssh_keys
   depends_on    = [module.image_factory]
+
 
 }
 
