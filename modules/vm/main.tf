@@ -59,7 +59,7 @@ resource "proxmox_virtual_environment_vm" "server" {
   }
 
   network_device {
-    queue = var.net_queue
+    queues = var.net_queue
     bridge  = var.bridge != null ? var.bridge : "vmbr0"
     vlan_id = var.vlan_id != null ? var.vlan_id : null
   }
