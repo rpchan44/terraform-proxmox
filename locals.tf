@@ -31,7 +31,7 @@ locals {
       dns      = ["1.1.1.1","8.8.8.8"]
       cidr     = "192.168.51.32/24"
       next-hop = "192.168.51.1"
-      os_image = "jammy"
+      os_image = "noble"
       cores    = 2
       ram      = 1024
       vlan     = 51
