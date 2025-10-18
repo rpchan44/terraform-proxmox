@@ -17,6 +17,7 @@ locals {
   vms = {
     "vm-test-01" = {
       node     = "frodo"
+      net_queue = 0
       dns      = ["1.1.1.1","8.8.8.8"]
       cidr     = "192.168.51.31/24"
       next-hop = "192.168.51.1"
@@ -30,6 +31,7 @@ locals {
     }
     "vm-test-02" = {
       node     = "frodo"
+      net_queue = 0
       dns      = ["1.1.1.1","8.8.8.8"]
       cidr     = "192.168.51.32/24"
       next-hop = "192.168.51.1"
@@ -43,6 +45,7 @@ locals {
     }
     "vm-test-03" = {
       node     = "frodo"
+      net_queue = 0
       dns      = ["1.1.1.1","8.8.8.8"]
       cidr     = "192.168.51.33/24"
       next-hop = "192.168.51.1"
@@ -56,6 +59,7 @@ locals {
     }
     "vm-test-04" = {
       node     = "frodo"
+      net_queue = 0
       dns      = ["1.1.1.1","8.8.8.8"]
       cidr     = "192.168.51.34/24"
       next-hop = "192.168.51.1"
