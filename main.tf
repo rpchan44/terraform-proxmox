@@ -15,6 +15,7 @@ module "launch_instance" {
 
   os_release    = local.cloud_image[each.value.os_image]
   instance_name = each.key
+  net_queue     = try(each.value.net_queue, 0)
   vlan_id       = try(each.value.vlan, "")
   bridge        = try(each.value.bridge,"")
   tags          = try(each.value.tags,[])
