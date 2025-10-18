@@ -8,6 +8,7 @@ locals {
   ) ? try(data.terraform_remote_state.installer[0].outputs.cloud_image, {}) : {
     jammy = "local:iso/jammy-server-cloudimg-amd64.qcow2.img"
     noble = "local:iso/noble-server-cloudimg-amd64.qcow2.img"
+    plucky = "local:iso/plucky-server-cloudimg-amd64.qcow2.img"
   }
 }
 
