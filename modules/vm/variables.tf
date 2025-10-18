@@ -87,6 +87,6 @@ variable "cpu_type" {
 }
 
 variable "net_queue" {
-  type = string
-  default = "0"
+  type = number
+  default = 0
 }
