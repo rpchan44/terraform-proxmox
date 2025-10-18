@@ -1,11 +1,3 @@
-resource "proxmox_virtual_environment_dns" "default" {
-
-  node_name     = var.node_name
-  domain        = var.domain
-  servers       = var.dns_server
-
-}
-
 resource "proxmox_virtual_environment_vm" "server" {
 
   name            = var.instance_name
@@ -26,6 +18,10 @@ resource "proxmox_virtual_environment_vm" "server" {
       password = var.secret
       keys     = var.ssh_keys != "" ? [trimspace(var.ssh_keys)] : []
     }
+  dns {
+      servers       = var.dns_server
+      domain = var.domain
+  }
     ip_config {
       ipv4 {
         address = var.ip_address
