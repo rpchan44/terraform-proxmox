@@ -6,6 +6,7 @@ resource "proxmox_virtual_environment_vm" "server" {
 
   cpu {
     cores = var.cpu_cores
+    type = var.cpu_type
   }
 
   memory {
