@@ -17,7 +17,7 @@ resource "proxmox_virtual_environment_vm" "server" {
     user_account {
       username = var.username
       password = var.secret
-      keys     = var.ssh_keys != "" ? [trimspace(var.ssh_keys)] : []
+      keys     = var.ssh_keys != null ? [trimspace(var.ssh_keys)] : []
     }
     dns {
       servers  = var.dns_server
@@ -32,8 +32,8 @@ resource "proxmox_virtual_environment_vm" "server" {
   }
 
   network_device {
-    bridge  = var.bridge != "" ? var.bridge : "vmbr0"
-    vlan_id = var.vlan_id != "" ? var.vlan_id : ""
+    bridge  = var.bridge != null ? var.bridge : "vmbr0"
+    vlan_id = var.vlan_id != null ? var.vlan_id : null
   }
 
   disk {

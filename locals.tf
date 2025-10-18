@@ -39,30 +39,30 @@ locals {
       vlan     = 51
       tags     = ["linux","app2"]
     }
-    "vm-test-03" = {
-      node     = "frodo"
-      dns      = ["1.1.1.1","8.8.8.8"]
-      cidr     = "192.168.51.33/24"
-      next-hop = "192.168.51.1"
-      os_image = "noble"
-      cpu_type = "host"
-      cores    = 2
-      ram      = 1024
-      vlan     = 51
-      tags     = ["linux","app3"]
-    }
-    "vm-test-04" = {
-      node     = "frodo"
-      dns      = ["1.1.1.1","8.8.8.8"]
-      cidr     = "192.168.51.34/24"
-      next-hop = "192.168.51.1"
-      os_image = "jammy"
-      cpu_type = "host"
-      cores    = 2
-      ram      = 1024
-      vlan     = 51
-      tags     = ["linux","app4"]
-    }
+    # "vm-test-03" = {
+    #   node     = "frodo"
+    #   dns      = ["1.1.1.1","8.8.8.8"]
+    #   cidr     = "192.168.51.33/24"
+    #   next-hop = "192.168.51.1"
+    #   os_image = "noble"
+    #   cpu_type = "host"
+    #   cores    = 2
+    #   ram      = 1024
+    #   vlan     = 51
+    #   tags     = ["linux","app3"]
+    # }
+    # "vm-test-04" = {
+    #   node     = "frodo"
+    #   dns      = ["1.1.1.1","8.8.8.8"]
+    #   cidr     = "192.168.51.34/24"
+    #   next-hop = "192.168.51.1"
+    #   os_image = "jammy"
+    #   cpu_type = "host"
+    #   cores    = 2
+    #   ram      = 1024
+    #   vlan     = 51
+    #   tags     = ["linux","app4"]
+    # }
   }
 }
 
