@@ -1,0 +1,6 @@
+distribution:
+  images:
+    - noble
+    - jammy
+    - plucky
+
