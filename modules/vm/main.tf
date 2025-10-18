@@ -1,3 +1,26 @@
+resource "proxmox_virtual_environment_file" "user_data_cloud_config" {
+  content_type = "snippets"
+  datastore_id = "local"
+  node_name    = var.node_name
+
+  source_raw {
+    data = <<-EOF
+    #cloud-config
+    timezone: Asia/Manila
+    package_update: true
+    packages:
+      - qemu-guest-agent
+      - net-tools
+      - curl
+    runcmd:
+      - systemctl enable qemu-guest-agent
+      - systemctl start qemu-guest-agent
+      - echo "done" > /tmp/cloud-config.done
+    EOF
+    file_name = "user-data-cloud-config.yaml"
+  }
+}
+
 resource "proxmox_virtual_environment_vm" "server" {
 
   name            = var.instance_name
@@ -29,6 +52,7 @@ resource "proxmox_virtual_environment_vm" "server" {
         gateway = var.gateway
       }
     }
+    user_data_file_id = proxmox_virtual_environment_file.user_data_cloud_config.id
   }
 
   network_device {
