@@ -1,8 +1,3 @@
-module "ip_generator" {
-  source = "./modules/ipgenerator"
-  subnet = "192.168.51.0/24"
-}
-
 module "image_factory" {
   source = "./modules/images"
 
@@ -24,7 +19,6 @@ module "launch_instance" {
   bridge        = try(each.value.bridge,"")
   tags          = try(each.value.tags,[])
   ip_address    = each.value.cidr
-  #ip_address    = module.ip_generator.usable_ips[index(keys(local.vms), each.key)]
   cpu_cores     = each.value.cores
   memory        = each.value.ram
   username      = var.username
