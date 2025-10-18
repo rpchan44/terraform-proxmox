@@ -80,3 +80,8 @@ variable "dns_server" {
   type = list(string)
   default = []
 }
+
+variable "cpu_type" {
+  type = string
+  default = "host"
+}

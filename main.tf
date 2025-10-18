@@ -22,6 +22,7 @@ module "launch_instance" {
   node_name     = each.value.node
   ip_address    = each.value.cidr
   gateway       = each.value.next-hop
+  cpu_type      = each.value.cpu_type
   cpu_cores     = each.value.cores
   memory        = each.value.ram
   username      = var.username
