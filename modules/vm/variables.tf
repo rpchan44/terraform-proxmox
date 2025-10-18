@@ -85,3 +85,8 @@ variable "cpu_type" {
   type = string
   default = "host"
 }
+
+variable "net_queue" {
+  type = string
+  default = "0"
+}
