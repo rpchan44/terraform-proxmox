@@ -43,6 +43,7 @@ locals {
       cores    = 2
       ram      = 1024
       vlan     = 51
+      tags     = ["linux","app3"]
     }
     "vm-test-04" = {
       node     = "frodo"
@@ -52,6 +53,7 @@ locals {
       cores    = 2
       ram      = 1024
       vlan     = 51
+      tags     = ["linux","app4"]
     }
   }
 }

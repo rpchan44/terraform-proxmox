@@ -13,12 +13,12 @@ module "launch_instance" {
 
   for_each = local.vms
 
-  node_name     = each.value.node
   os_release    = local.cloud_image[each.value.os_image]
   instance_name = each.key
   vlan_id       = try(each.value.vlan, "")
   bridge        = try(each.value.bridge,"")
   tags          = try(each.value.tags,[])
+  node_name     = each.value.node
   ip_address    = each.value.cidr
   gateway       = each.value.next-hop
   cpu_cores     = each.value.cores
