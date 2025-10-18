@@ -70,3 +70,13 @@ variable "tags" {
   type = list(string)
   default = []
 }
+
+variable "domain" {
+  type = string
+  default = "infradead.internal"
+}
+
+variable "dns_server" {
+  type = list(string)
+  default = []
+}
